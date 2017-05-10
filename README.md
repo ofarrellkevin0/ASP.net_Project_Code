@@ -4,7 +4,7 @@ The user is required to register with the website and then log into the website 
 
 The database is currently on a local machine on not live online as of yet. For this reason a demo on github isn't available at this moment. 
 However the database code is in a file called DatabaseCode.sql with all the stored procedures. 
-This means that the code can be downloaded so show you can do your own demo of the code. 
+This means that the code can be downloaded so a demo of the code can still be done. 
 This website was developed as part of a higher diploma in software development.
 
 
