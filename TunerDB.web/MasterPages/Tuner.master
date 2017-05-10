@@ -1,0 +1,134 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Tuner.master.cs" Inherits="TunerMasterPage" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - My ASP.NET Application</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Scripts.Render("~/bundles/modernizr") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Content/css" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+</head>
+<body>
+    <div class="thebackgroundimage"></div>
+    <form runat="server">
+        <asp:ScriptManager ID="ScriptManager1" EnablePageMethods="true" EnablePartialRendering="true" runat="server">
+            <Scripts>
+                <%--To learn more about bundling scripts in ScriptManager see http://go.microsoft.com/fwlink/?LinkID=301884 --%>
+                <%--Framework Scripts--%>
+                <asp:ScriptReference Name="MsAjaxBundle" />
+                <asp:ScriptReference Name="jquery" />
+                <asp:ScriptReference Name="bootstrap" />
+                <asp:ScriptReference Name="respond" />
+                <asp:ScriptReference Name="WebForms.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebForms.js" />
+                <asp:ScriptReference Name="WebUIValidation.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebUIValidation.js" />
+                <asp:ScriptReference Name="MenuStandards.js" Assembly="System.Web" Path="~/Scripts/WebForms/MenuStandards.js" />
+                <asp:ScriptReference Name="GridView.js" Assembly="System.Web" Path="~/Scripts/WebForms/GridView.js" />
+                <asp:ScriptReference Name="DetailsView.js" Assembly="System.Web" Path="~/Scripts/WebForms/DetailsView.js" />
+                <asp:ScriptReference Name="TreeView.js" Assembly="System.Web" Path="~/Scripts/WebForms/TreeView.js" />
+                <asp:ScriptReference Name="WebParts.js" Assembly="System.Web" Path="~/Scripts/WebForms/WebParts.js" />
+                <asp:ScriptReference Name="Focus.js" Assembly="System.Web" Path="~/Scripts/WebForms/Focus.js" />
+                <asp:ScriptReference Name="WebFormsBundle" />
+
+
+                <%--Site Scripts--%>
+            </Scripts>
+        </asp:ScriptManager>
+
+        <div class="navbar navbar-inverse navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" runat="server" href="~/Pages/Tuner.aspx">SoulTuner</a>
+                </div>
+
+
+
+                <div class="collapse navbar-collapse">
+                            <ul class="nav navbar-nav navbar-right">
+                                <li><asp:Label runat="server" ID ="Username" CssClass="userlabel"> </asp:Label> </li>
+                            </ul>
+
+                    <ul class="nav navbar-nav">
+                        <li><a runat="server" href="~/Pages/Tuner.aspx">Tuner</a></li>
+
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Recordings <b class="caret"></b></a>
+
+                            <ul class="dropdown-menu">
+
+                                <li><a runat="server" href="~/Pages/Record.aspx">Record </a></li>
+
+                                <li class="divider"></li>
+
+                                <li><a runat="server" href="~/Pages/Upload.aspx">Upload</a></li>
+
+                                <li class="divider"></li>
+
+                                <li><a runat="server" href="~/Pages/MyRecordings.aspx">My Recordings</a></li>
+
+                                <li class="divider" runat="server" id="divider1" visible="false"></li>
+
+                                <li><a id="menuAdminRecordings" runat="server" visible="false" href="~/Pages/AdminRecordings.aspx">All Recordings </a></li>
+
+                            </ul>
+
+                        </li>
+                        <li>
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Instruments <b class="caret"></b></a>
+
+                            <ul class="dropdown-menu">
+
+                                <li><a runat="server" href="~/Pages/MyInstruments.aspx">My Instruments</a></li>
+
+                                <li class="divider"></li>
+
+                                <li><a runat="server" href="~/Pages/CreateInstrument.aspx">Create Instrument</a></li>
+
+                                <li class="divider"></li>
+
+                                <li><a runat="server" href="~/Pages/Mytunings.aspx">My Tunings</a></li>
+
+                                <li class="divider" runat="server" id="divider2" visible="false"></li>
+
+                                <li><a id="menuAdminInstruments" runat="server" visible="false" href="~/Pages/Instruments.aspx">All Instruments </a></li>
+
+                                <li class="divider" runat="server" id="divider3" visible="false"></li>
+
+                                <li><a id="menuAdminTunings" runat="server" visible="false" href="~/Pages/TuningRecords.aspx">Tuning Records</a></li>
+
+                            </ul>
+
+                        </li>
+
+                        <li>
+                            <a href="/Pages/LogOut.aspx"> Logout</a>
+                        </li>
+
+                        <li><a id="menuAdminAccounts" runat="server" visible="false" href="~/Pages/Accounts.aspx">Accounts </a></li>
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+   
+        <div class="container body-content">
+
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+</body>
+
+</html>

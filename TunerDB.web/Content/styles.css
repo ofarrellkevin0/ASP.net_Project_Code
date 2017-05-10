@@ -1,0 +1,19 @@
+﻿.greenNote {
+    font-size: 300px;
+    color: #00FF00;
+    position:absolute;
+    z-index: 999;
+    margin-top: 10px;
+    margin-left: 550px;
+}
+.redNote {
+    font-size: 300px;
+    color: #FF0000;
+    position:absolute;
+    z-index: 999;
+    margin-top: 10px;
+    margin-left: 550px;
+}
+
+#notedisplay {
+}
